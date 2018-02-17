@@ -12,7 +12,6 @@ uint16_t MouseWrapper_::section_left;
 boolean MouseWrapper_::is_warping;
 
 uint8_t MouseWrapper_::accelStep;
-uint8_t MouseWrapper_::speedLimit = 127;
 
 MouseWrapper_::MouseWrapper_(void) {
 }
@@ -98,7 +97,7 @@ uint8_t MouseWrapper_::acceleration(uint8_t cycles) {
 }
 
 
-void MouseWrapper_::move(int8_t x, int8_t y) {
+void MouseWrapper_::move(int8_t x, int8_t y, uint8_t speedLimit) {
   int16_t moveX = 0;
   int16_t moveY = 0;
   static int8_t remainderX = 0;

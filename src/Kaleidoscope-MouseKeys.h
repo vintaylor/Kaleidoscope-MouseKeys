@@ -11,6 +11,7 @@ class MouseKeys_ : public KaleidoscopePlugin {
 
   static uint8_t speed;
   static uint16_t speedDelay;
+  static uint8_t speedLimit;
   static uint8_t accelSpeed;
   static uint16_t accelDelay;
   static uint8_t wheelSpeed;

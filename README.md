@@ -117,13 +117,14 @@ The warping keys are the following:
 The plugin provides a `MouseKeys` object, with the following methods and
 properties available:
 
-### `.speed` and `.speedDelay`
+### `.speed`, `.speedDelay`, and `.speedLimit`
 
-> These two control the speed of the mouse cursor, when a movement key is held.
-> The former, `.speed`, controls the amount of pixels the cursor moves, when it
-> has to move, and defaults to 1. The latter, `.speedDelay` is the amount of
-> time - in milliseconds - to wait between two movements, and defaults to 0, no
-> delay.
+> These three control the speed of the mouse cursor, when a movement key is held.
+> The first, `.speed`, controls the amount of pixels the cursor moves, when it
+> has to move, and defaults to 1. The second, `.speedDelay` is the amount of
+> time - in milliseconds - to wait between two movements, and defaults to 1
+> millisecond. The last, `.speedLimit` is the maximum number of pixels the cursor
+> is allowed to move in each movement, along each axis.
 
 ### `.accelSpeed` and `.accelDelay`
 
@@ -132,7 +133,7 @@ properties available:
 > while the second, `.accelDelay`, controls how often (in milliseconds)
 > acceleration should be applied.
 >
-> They default to 1 pixel and 50 milliseconds, respectively.
+> They default to 1 pixel and 64 milliseconds, respectively.
 
 ### `.wheelSpeed` and `.wheelDelay`
 

@@ -31,7 +31,6 @@ class MouseWrapper_ {
   static void pressButton(uint8_t button);
   static void release_button(uint8_t button);
   static uint8_t accelStep;
-  static uint8_t speedLimit;
 
  private:
   static uint16_t next_width;

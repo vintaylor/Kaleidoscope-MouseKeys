@@ -8,6 +8,7 @@ uint8_t MouseKeys_::mouseMoveIntent;
 
 uint8_t MouseKeys_::speed = 1;
 uint16_t MouseKeys_::speedDelay = 1;
+uint8_t MouseKeys_::speedLimit = 127;
 
 uint8_t MouseKeys_::accelSpeed = 1;
 uint16_t MouseKeys_::accelDelay = 64;
@@ -72,7 +73,7 @@ void MouseKeys_::loopHook(bool postClear) {
   else if (mouseMoveIntent & KEY_MOUSE_RIGHT)
     moveX = speed;
 
-  MouseWrapper.move(moveX, moveY);
+  MouseWrapper.move(moveX, moveY, speedLimit);
 }
 
 Key MouseKeys_::eventHandlerHook(Key mappedKey, byte row, byte col, uint8_t keyState) {
